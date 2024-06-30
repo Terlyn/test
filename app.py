@@ -17,7 +17,7 @@ supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 @app.route('/')
 def index():
-    data = supabase.table('your_table').select('*').execute()
+    data = supabase.table('usuarios').select('*').execute()
     return jsonify(data.data)
 
 if __name__ == '__main__':
